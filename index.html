@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeAuraSisters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Lobster&family=Montserrat:ital@1&family=Salsa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo"><img src="SafeAuraSisters.png"></div>
+        
+        <div class="list">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#emotions">Emotions</a></li>
+                <li><a href="#safety">Safety</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="home" class="home">
+        <img src="Girl.png" class="home-img">
+        <div class="text">
+            <div class="home-text" id="text"><div class="greeting" id="greeting">Hey Beautiful Souls!<br> Welcome to SafeAuraSisters!🌸</div>
+                <br>
+                We're thrilled to have you join us in this cozy corner of the internet. SafeAuraSisters is more than a website; it's a vibe, a community of incredible women supporting each other.
+                <br><br>
+                While we're still working on some cool features (pssst, logins are in the pipeline), right now, it's all about good vibes and valuable content. Dive into our articles, jot down your thoughts, and don't be shy – hit us up through the contact forms!
+                <br>
+                And guess what? Your safety is our priority! With just one click, you can share your location with your loved ones via email. We believe in having each other's backs, both online and offline. Plus, use the power of words to share your feelings and emotions by pouring them onto our digital journal.
+                <br><br>
+                Think of SafeAuraSisters as your digital BFF, a place where you're understood, heard, and celebrated. We're all about building a sisterhood that's as real as it gets.
+                <br><br>
+                Cheers to the journey ahead!
+                <br>
+                Loads of love,<br>
+                The SafeAuraSisters Crew🤍</div>
+            <img src="Girl2.png">
+        </div>
+        
+    </div>
+    <div id="community" class="community">
+        Here, you're not just a part of a community; you're embraced by a sisterhood that uplifts and supports.
+        <div class="community-grid">
+        <div class="p1">
+            💖 Your Journey, Your Power:<br>
+            
+            Within every woman lies a unique journey, a testament to her strength and power.
+            <br><br>
+            👭 Sisterhood in Solidarity:<br>
+            
+            We're more than a community; we're a sisterhood. Your victories are our victories, and your struggles are met with unwavering support.
+        </div> 
+        <div class="p2">
+            🌺 Self-Care is Empowerment:<br>
+            
+            Prioritize self-care as an empowering act, nurturing your physical and mental well-being.
+            <br><br>
+            🌈 Celebrating Diversity:<br>
+            
+            Our strength lies in our diversity. Every story, every background, adds richness to our collective narrative.
+        </div>  
+        <div class="p2">
+            🌟 Courageous Sharing, Empowering Vulnerability:<br>
+            
+            Sharing your story is an act of courage; vulnerability is strength within our safe space.<br><br>
+            🚀 Overcoming Challenges, Rising Higher:<br>
+            
+            Challenges are stepping stones to growth. Share your triumphs, inspiring others to rise stronger.
+
+        </div>
+        <div class="p1">
+            🌸 Goals, Dreams, and Celebrating Victories:<br>
+            
+            Dream big, set goals, and let our community be your cheering squad as you celebrate each victory.<br><br>
+            ✨ Positive Affirmations:<br>
+            
+            Repeat after me: "I am powerful, I am resilient, and I am deserving of love and success."
+        </div>
+        <div class="p1">
+            🌿 Mindfulness for Well-being:
+            <br>
+            Practice mindfulness as a gift to yourself. Be present, breathe, and find strength in stillness.<br><br>
+            🤝 Engage, Connect, Belong:<br>
+            
+            Actively engage, connect with your sisters, and let the bonds of sisterhood grow stronger.
+        </div>
+        <div class="p2">
+            🌱 Growth is Beautiful:
+            <br>
+            Embrace the beauty of continuous growth. Seek knowledge, nurture your passions, and become the incredible woman you're destined to be.<br><br>
+            You are not alone on this journey. Together, we build a community of empowerment, love, and boundless possibilities.
+        </div>
+    </div>
+    </div>
+    <div class="emotions" id="emotions">
+        <div class="emotion-head">Use the power of words to share your feelings and emotions by pouring them onto our digital journal.</div>
+        <div class="emotion-grid">
+            <input placeholder="Wanna share something?" class="thought">
+            <input type="date" class="date">
+            <button class="Add" onclick="addToList()">Yup I,m done</button>
+        
+        </div>
+        <div class="entry"></div>
+    </div>
+    <div class="safety" id="safety">
+        <div id="map"></div>
+        <button class="location-button" onclick="getLocation()">Click me</button>
+        <div class="demo">this is demo</div>
+        <form method="post">
+            <input type="button" value="Send Email"
+                onclick="sendEmail()" />
+        </form>
+    </div>
+    
+
+    
+    
+
+</body>
+</html>
