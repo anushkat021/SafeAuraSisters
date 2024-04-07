@@ -119,12 +119,18 @@
         <div class="entry"></div>
     </div>
     <div class="safety" id="safety">
-        <div id="map"></div>
-        <button class="location-button" onclick="getLocation()">Click me</button>
-        <div class="demo">this is demo</div>
-        <form method="post">
-            <input type="button" value="Send Email"
+        <div class="location">
+            <div id="map"></div>
+            <div class="location-text">
+                <button class="location-button" onclick="getLocation()">My Location</button>
+                <div class="demo">Locate yourself with a click!</div>
+                <input type="button" value="Send Email" class="mail-button"
                 onclick="sendEmail()" />
+            </div>
+        </div>
+        
+        <form method="post">
+            
         </form>
     </div>
     
