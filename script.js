@@ -6,6 +6,10 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const array=[]
 let record=" ";
 
+const mailList = [];
+let list = " ";
+
+//location
 lastLocation();
 
 var circle = L.circle([21.075, 82.46], {
@@ -45,18 +49,9 @@ function sendEmail() {
   }
 }
 
-function Emails(position) { 
-  Email.send({
-    SecureToken : "0956929a-3d03-4174-8c4a-d79aca8467e9",
-    To : 'anushkatiwari12345678@gmail.com',
-    From : "comderitis@gmail.com",
-    Subject : "need help",
-    Body : `Need Help!<br> Current location: <br>Latitude :${position.coords.latitude} Longitude: ${position.coords.longitude} `
-  }).then(
-    message => alert('sent')
-  );
-}
-//feelings
+  
+
+//feelings & emotions
 
 function display(){
     record=' ';
@@ -84,3 +79,79 @@ function del(index){
     array.splice(index,1);
     display();
 }               
+
+//safety
+
+//display mails-contacts
+
+function displayMail() {
+    list = ' ';
+    for (let i = 0; i < mailList.length; i++) {
+        list += `
+        <div>${mailList[i]}</div>
+        <button onclick="del(${i})" class="dlt-button">Don't want it anymore</button>`;
+    }
+    document.querySelector('.entry-mail').innerHTML = list;
+    document.querySelector('.mail-id').value = '';
+    document.querySelector('.mail-id').placeholder = 'Enter contact';
+}
+
+function addToMailList() {
+    let task = document.querySelector('.mail-id').value;
+    if (task && validateEmail(task)) {
+        mailList.push(task);
+        displayMail();
+    } else {
+        alert('Please enter a valid email address.');
+    }
+}
+
+function del(index) {
+    mailList.splice(index, 1);
+    displayMail();
+}
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+//send-mails 
+
+// function Emails(position) {
+  
+//   for(let i=0;i<mailList.length;++i){
+//     Email.send({
+//       SecureToken : "0956929a-3d03-4174-8c4a-d79aca8467e9",
+//       To : `${mailList[i]}`,
+//       From : "comderitis@gmail.com",
+//       Subject : "need help",
+//       Body : `Need Help!<br> Current location: <br>Latitude :${position.coords.latitude} Longitude: ${position.coords.longitude} `
+//     }).then(
+//       message => alert(`sent to ${mailList[i]}`)
+//     );
+//   }
+  
+// }
+
+function Emails(position) {
+  for (let i = 0; i < mailList.length; ++i) {
+    Email.send({
+      SecureToken: "0956929a-3d03-4174-8c4a-d79aca8467e9",
+      To: `${mailList[i]}`,
+      From: "comderitis@gmail.com",
+      Subject: "Need Help",
+      Body: `Need Help!<br> Current location: <br>Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`
+    }).then(
+      message => {
+        if (message === 'OK') {
+          alert(`Email sent to ${mailList[i]}`);
+        } else {
+          alert(`Failed to send email to ${mailList[i]}: ${message}`);
+        }
+      }
+    ).catch(
+      error => alert(`Error sending email to ${mailList[i]}: ${error}`)
+    );
+  }
+}

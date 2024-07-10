@@ -211,5 +211,60 @@ ul li a{
     z-index:1;
 }
 
+/* mails */
+
+.mails-head{
+    font-family: 'Salsa', cursive;
+    font-size:1.3rem;
+    color:#1B3A5D;
+    padding-top:100px;
+    margin-left:40px;
+    margin-right:40px;
+
+}
+.mails-grid{
+    display:grid;
+    margin-top:60px;
+    grid-template-columns:3fr 0.5fr;
+    column-gap:50px;
+    row-gap:20px;
+
+}
+.mail-id{
+    height:50px;
+    border-radius: 20px;
+    padding-left:10px;
+    padding-right: 10px;
+    font-size:1.2rem;
+}
+.Add-mail{
+    height:50px;
+    border-radius: 20px;
+    padding-left:10px;
+    padding-right: 10px;
+    font-size:1.2rem;
+    color: #fff;
+    background-color: #875A53;
+}
+.entry-mail{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    row-gap:20px;
+    column-gap:50px;
+    background-color: rgb(246, 221, 181);
+    padding:20px;
+    border-radius:15px;
+    margin-top:50px;
+}
+.dlt-mail{
+    height:50px;
+    border-radius: 20px;
+    padding-left:10px;
+    padding-right: 10px;
+    font-size:1.2rem;
+    color: #fff;
+    background-color:#1B3A5D;
+}
+
 
  
