@@ -23,10 +23,10 @@ html {
 }
 .list ul{
     margin-right:0;
-    display:grid;
-    grid-template-columns:1fr 1.5fr 1.2fr 1fr 1fr;
-    align-items:center;
-    justify-items: space-around;
+    display: grid; 
+    grid-template-columns: 1fr 1.5fr 1.2fr 1fr 1fr; 
+    align-items: center;
+    justify-items: space-around;   
 
 }
 ul li{
@@ -267,4 +267,137 @@ ul li a{
 }
 
 
- 
+/* For tablets and larger devices */
+@media (max-width: 1024px) {
+    .nav-bar {
+        grid-template-columns: 1fr 4fr;
+        column-gap: 20%;
+    }
+
+    .list ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .text {
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .emotion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+    }
+
+    #map {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .mails-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entry {
+        grid-template-columns: 1fr;
+    }
+
+    .entry-mail {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .nav-bar {
+        grid-template-columns: 1fr;
+        column-gap: 10%;
+        padding: 10px;
+    }
+
+    .list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .home-img, .text img {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .text {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .community {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .emotion-grid {
+        grid-template-columns: 1fr;
+        column-gap: 10px;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+    }
+
+    #map {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .mails-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entry {
+        grid-template-columns: 1fr;
+    }
+
+    .entry-mail {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .list ul {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+    }
+}
