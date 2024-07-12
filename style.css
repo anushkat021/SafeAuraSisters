@@ -1,7 +1,7 @@
 body{
     background-color:pink;
     margin:0;
-    margin-bottom:800px;
+    margin-bottom:30px;
 }
 html {
     scroll-behavior: smooth;
@@ -401,3 +401,68 @@ ul li a{
         align-items: center; 
     }
 }
+
+
+/* Contact Section */
+.contact-section {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+.contact-section h2 {
+    font-family: 'Salsa', cursive;
+    font-size: 1.8rem;
+    color: #1B3A5D;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact-list li {
+    font-size: 1.3rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: hsl(211.82deg 55% 23.53%);
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.byline {
+    font-family: 'Arbutus Slab', serif;
+    font-size: 1.2rem;
+    color: #875A53;
+    margin-top: 20px;
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px 10px;
+    }
+
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-list li {
+        font-size: 1rem;
+    }
+
+    .byline {
+        font-size: 1rem;
+    }
+}
+
