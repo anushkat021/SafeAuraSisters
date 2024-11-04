@@ -118,9 +118,28 @@ ul li a{
     margin-right:40px;
     display:grid;
     margin-top:60px;
+    grid-template-columns:3fr 1fr;
+    column-gap:10%;
+    align-items: center;
+    
+}
+
+
+/*diary body*/
+.diary-body{
+    background-image: url("media/diary-pages.jpeg");
+    background-size: cover;
+}
+
+.emotion-grid{
+    padding-top:100px;
+    margin-left:40px;
+    margin-right:40px;
+    display:grid;
+    margin-top:60px;
     grid-template-columns:3fr 1fr 0.5fr;
     column-gap:50px;
-    row-gap:20px;
+    align-items: center;
 }
 .thought{
     height:50px;
@@ -169,7 +188,7 @@ ul li a{
 .diary{
     height:240px;
     width:167px;
-    background-image:url("diaryimg.jpg");
+    background-image:url("media/diaryimg.jpg");
     background-size: cover;
     box-shadow:3px 0px 30px 3px rgb(255, 255, 255) ;
 }

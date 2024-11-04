@@ -3,7 +3,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-const array=[]
+
+const array=[];
 let record=" ";
 
 const mailList = [];
@@ -11,13 +12,6 @@ let list = " ";
 
 //location
 // lastLocation();
-
-var circle = L.circle([21.075, 82.46], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map);
 
 let x =document.querySelector(".demo");
 function getLocation() {
@@ -55,9 +49,15 @@ function sendEmail() {
 
 var btn=document.querySelector(".diary");
 btn.addEventListener("click",()=>{
-  window.open("emotionaljournal.html", "_blank");
+  document.querySelector("#flip-audio").play();
+  setTimeout(()=>{
+    window.open("emotionaljournal.html", "_blank");
+  },600);
+  
 }); 
 
+
+//entry in the diary
 function display(){
     record=' ';
     for(let i=0;i<array.length;i++){

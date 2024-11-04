@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeAuraSisters</title>
+    <!-- fonts from google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Lobster&family=Montserrat:ital@1&family=Salsa&display=swap" rel="stylesheet">
+    <!-- leaflet api for location tracking -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-    <link href="style.css" rel="stylesheet">
-    
+    <!-- smtp for mass mailing -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    
+    <!-- css and script file -->
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 
 </head>
-<body>
+<body class="home-body">
     <div class="nav-bar">
-        <div class="logo"><img src="SafeAuraSisters.png"></div>
+        <div class="logo"><img src="media/SafeAuraSisters.png"></div>
         
         <div class="list">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#community">Community</a></li>
-                <li><a href="#emotions">Emotions</a></li>
+                <li><a href="#emotions">My Diary</a></li>
                 <li><a href="#safety">Safety</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </div>
     </div>
     <div id="home" class="home">
-        <img src="Girl.png" class="home-img">
+        <img src="media/Girl.png" class="home-img">
         <div class="text">
             <div class="home-text" id="text"><div class="greeting" id="greeting">Hey Beautiful Souls!<br> Welcome to SafeAuraSisters!🌸</div>
                 <br>
@@ -50,7 +53,7 @@
                 <br>
                 Loads of love,<br>
                 The SafeAuraSisters Crew🤍</div>
-            <img src="Girl2.png">
+            <img src="media/Girl2.png">
         </div>
         
     </div>
@@ -108,11 +111,15 @@
         </div>
     </div>
     </div>
+
+
     <div class="emotions" id="emotions">
-        <div class="emotion-head">Use the power of words to share your feelings and emotions by pouring them onto our digital journal.</div>
+        <div class="emotion-head">Let your thoughts flow freely with our digital diary, your own private space to let emotions out whenever you need. This journal is here for everything—whether it's sharing a big moment, venting about a tough day, or just jotting down a random thought.<br><br> Writing can be so powerful, sometimes even helping you feel a little lighter and bringing some clarity. There’s no pressure or judgment here, just a safe place to be honest and real with yourself. So take a deep breath, and let your words help you unwind and feel at ease.🌸
+        </div>
         <button class="diary"></button>
     </div>
-    <a class="linktodiary" href="file:///D:/projects/SafeAuraSisters/emotionaljournal.html"></a>
+    <audio id="flip-audio" src="media/page-flip-cover.wav"></audio>
+
     <div class="safety" id="safety">
         <div class="location">
             <div id="map"></div>
@@ -153,11 +160,5 @@
         <form method="post">
             
         </form>
-
-    
-
-    
-        <script src="script.js" defer></script>
-
 </body>
 </html>
