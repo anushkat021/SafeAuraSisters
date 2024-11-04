@@ -10,7 +10,7 @@ const mailList = [];
 let list = " ";
 
 //location
-lastLocation();
+// lastLocation();
 
 var circle = L.circle([21.075, 82.46], {
     color: 'red',
@@ -36,10 +36,10 @@ function showPosition(position) {
     
 }
 
-function lastLocation(){
-    var marker = L.marker([latitude,longitude]).addTo(map);
-    marker.bindPopup("last location").openPopup();
-}
+// function lastLocation(){
+//     var marker = L.marker([latitude,longitude]).addTo(map);
+//     marker.bindPopup("last location").openPopup();
+// }
 
 function sendEmail() {
   if (navigator.geolocation) {
@@ -52,6 +52,11 @@ function sendEmail() {
   
 
 //feelings & emotions
+
+var btn=document.querySelector(".diary");
+btn.addEventListener("click",()=>{
+  window.open("emotionaljournal.html", "_blank");
+}); 
 
 function display(){
     record=' ';
@@ -118,21 +123,6 @@ function validateEmail(email) {
 
 //send-mails 
 
-// function Emails(position) {
-  
-//   for(let i=0;i<mailList.length;++i){
-//     Email.send({
-//       SecureToken : "0956929a-3d03-4174-8c4a-d79aca8467e9",
-//       To : `${mailList[i]}`,
-//       From : "comderitis@gmail.com",
-//       Subject : "need help",
-//       Body : `Need Help!<br> Current location: <br>Latitude :${position.coords.latitude} Longitude: ${position.coords.longitude} `
-//     }).then(
-//       message => alert(`sent to ${mailList[i]}`)
-//     );
-//   }
-  
-// }
 
 function Emails(position) {
   for (let i = 0; i < mailList.length; ++i) {

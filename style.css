@@ -106,6 +106,9 @@ ul li a{
     border-radius:10px;
 
 }
+
+/* emotional section*/ 
+
 .emotions{
     font-family: 'Salsa', cursive;
     font-size:1.3rem;
@@ -113,15 +116,11 @@ ul li a{
     padding-top:100px;
     margin-left:40px;
     margin-right:40px;
-
-}
-.emotion-grid{
     display:grid;
     margin-top:60px;
     grid-template-columns:3fr 1fr 0.5fr;
     column-gap:50px;
     row-gap:20px;
-
 }
 .thought{
     height:50px;
@@ -166,6 +165,21 @@ ul li a{
     color: #fff;
     background-color:#1B3A5D;
 }
+
+.diary{
+    height:240px;
+    width:167px;
+    background-image:url("diaryimg.jpg");
+    background-size: cover;
+    box-shadow:3px 0px 30px 3px rgb(255, 255, 255) ;
+}
+.diary:hover{
+    height:245px;
+    width:172px;
+    box-shadow:3px 0px 30px 0px rgb(238, 238, 108) ;
+}
+
+/*location*/ 
 .safety{
     font-family: 'Salsa', cursive;
     font-size:1.3rem;
@@ -295,7 +309,7 @@ ul li a{
         margin-right: 20px;
     }
 
-    .emotion-grid {
+    .emotions {
         grid-template-columns: 1fr;
     }
 
@@ -367,7 +381,7 @@ ul li a{
         margin-right: 5px;
     }
 
-    .emotion-grid {
+    .emotions {
         grid-template-columns: 1fr;
         column-gap: 10px;
     }
