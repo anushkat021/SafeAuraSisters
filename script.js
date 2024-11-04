@@ -10,6 +10,23 @@ let record=" ";
 const mailList = [];
 let list = " ";
 
+//audio button
+var pause=true;
+var audioBtn=document.querySelector(".audio");
+audioBtn.addEventListener("click",()=>{
+  if(pause){
+    audioBtn.style.backgroundImage="url('media/play-button-png-29656.png')";
+  document.querySelector("#intro-audio").play();
+    pause=false;
+  }
+  else{
+    audioBtn.style.backgroundImage="url('media/pause-button-png-29664.png')";
+  document.querySelector("#intro-audio").pause();
+    pause=true;
+  }
+  
+});
+
 //location
 // lastLocation();
 
